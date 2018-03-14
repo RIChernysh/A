@@ -1,0 +1,20 @@
+{HEAD
+Possible block types: 
+ALL - items order and items content should be observed strictly
+CONT - only items content should be observed strictly (any items order)
+NOT - forbidden items (should not be presented in traces)
+CYCL - Item order and item content should be observed strictly
+Current test case: 
+PSAP + Nadif events on ecall executing (normal case)
+}
+
+{CYCL
+ecall_app:psap: CallInfo Event PSAPEVT_CALLING
+ecall_app:psap: CallInfo Event PSAPEVT_CONNECTED
+ecall_app:psap: CallInfo Event PSAPEVT_MSD_REQ_RCVD
+ecall_app:psap: CallInfo Event PSAPEVT_MSD_LL_ACK
+ecall_app:psap: CallInfo Event PSAPEVT_MSD_AL_ACK
+ecall_app:psap: CallInfo Event PSAPEVT_PSAP_HANGUP
+ecall_app:psap: CallInfo Event PSAPEVT_STANDBY_READY
+}
+
